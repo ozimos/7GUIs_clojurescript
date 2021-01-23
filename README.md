@@ -123,7 +123,7 @@ Start a temporary local web server, build the app with the `dev` profile, and se
 hot reload:
 
 ```sh
-shadow-cljs -A dev watch app
+shadow-cljs -A:dev watch app
 
 ```
 
@@ -144,7 +144,7 @@ to which you may now connect.
 
 See
 [Shadow CLJS User's Guide: Editor Integration](https://shadow-cljs.github.io/docs/UsersGuide.html#_editor_integration).
-Note that  `shadow-cljs -A dev watch app` expects that this project's running build id is
+Note that  `shadow-cljs -A:dev watch app` expects that this project's running build id is
 `app`, or the keyword `:app` in a Clojure context.
 
 Alternatively, search the web for info on connecting to a `shadow-cljs` ClojureScript browser REPL
@@ -161,7 +161,7 @@ For example, in Vim / Neovim with `fireplace.vim`
 
 1. Connect to the `shadow-cljs` nREPL:
     ```sh
-    shadow-cljs -A dev browser-repl
+    shadow-cljs -A:dev browser-repl
     ```
     The REPL prompt, `shadow.user=>`, indicates that is a Clojure REPL, not ClojureScript.
 
@@ -179,7 +179,7 @@ Build the app with the `prod` profile, start a temporary local web server, launc
 Chrome/Chromium, run tests, and stop the web server:
 
 ```sh
-shadow-cljs -A prod compile karma-test
+shadow-cljs -A:prod compile karma-test
 karma start --single-run --reporters junit,dots
 ```
 
@@ -220,7 +220,7 @@ Use `debug?` for logging or other tasks that should run only on `dev` builds:
 Build the app with the `prod` profile:
 
 ```sh
-shadow-cljs -A prod release app
+shadow-cljs -A:prod release app
 ```
 
 Please be patient; it may take over 15 seconds to see any output, and over 30 seconds to complete.
