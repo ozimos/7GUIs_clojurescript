@@ -9,3 +9,6 @@
  ::initialize-db
  (fn-traced [_ _]
    db/default-db))
+
+(re-frame/reg-event-db ::inc-counter (fn-traced [db [_ _]]
+                                                (update db :counter inc)))

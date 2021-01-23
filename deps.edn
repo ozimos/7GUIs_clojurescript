@@ -29,10 +29,10 @@
          {seancorfield/depstar {:mvn/version "2.0.165"}}
          :ns-default hf.depstar
          :exec-args {}}
-  :install {:extra-deps {slipset/deps-deploy {:mvn/version "RELEASE"}}
+  :install {:extra-deps {slipset/deps-deploy #:mvn{:version "RELEASE"}}
            :exec-args {:installer :local
                         :artifact "deps-deploy.jar"}}
-  :deploy {:extra-deps {slipset/deps-deploy {:mvn/version "RELEASE"}}
+  :deploy {:extra-deps {slipset/deps-deploy #:mvn{:version "RELEASE"}}
            :exec-fn deps-deploy.deps-deploy/deploy
            :exec-args {:installer :remote
                        :sign-releases? true

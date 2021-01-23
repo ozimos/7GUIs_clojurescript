@@ -1,6 +1,6 @@
 (ns ozimos.gui7.core
     (:require
-     [reagent.core :as reagent]
+     [reagent.dom :as reagent]
      [re-frame.core :as re-frame]
      [ozimos.gui7.events :as events]
      [ozimos.gui7.views :as views]
